@@ -3,34 +3,6 @@ require 'mqtt'
 
 TOPIC = 'BABL'
 
-
-
-def show_intro
-  system "clear"
-
-
-  #Startup screen
-  puts '      ____              __        '
-  puts '     / __ \\   ____ _   / /      ___ '
-  puts '    / / / /  / __ `/  / /      / _ \\'
-  puts '   / /_/ /  / /_/ /  / /___   /  __/'
-  puts '  /_____/   \\__,_/  /_____/   \\___/ '
-  puts ''
-  puts '     +-+-+-+-+ +-+-+-+-+-+-+-+-+'
-  puts '     |R|u|b|y| |t|e|r|m|i|n|a|l|'
-  puts '     +-+-+-+-+ +-+-+-+-+-+-+-+-+'
-  puts ''
-  puts ' >> Author : David Lejeune'
-  puts ''
-  puts ' ###########################################'
-  puts ' #            MQTT Chat Machine            #'
-  puts ' ###########################################'
-  puts ''
-end
-
-
-
-
 def publish_message(name , msg)
 
       # Publish example
@@ -55,14 +27,9 @@ def get_msg
   @msg = gets.chomp
 end
 
-
-
-  show_intro
   puts 'Enter your name : '
   @name = gets.chomp
   get_msg
-
-
 
 
 while @msg != "q" do
